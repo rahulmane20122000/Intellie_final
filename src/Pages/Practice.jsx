@@ -29,7 +29,7 @@ const Practice = () => {
           <List title="Listining Skills" path="/listingSkills" />
           <List title="Mirror Reading" path="/mirrorReading" />
           <List title="Brain Teaser" path="/aiInterview" />
-          <List title="Extras" path="/aiInterview" />
+          <List title="Extras" path="/extras" />
         </div>
       </div>
     </>

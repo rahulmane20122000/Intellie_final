@@ -8,34 +8,17 @@ import writtingData from "../Data/WrittingData";
 import "../Style/writing.css";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import natural from "natural";
+import axios from "axios";
 
 const WrittingSkills = () => {
   const textareRef = useRef();
-
-  //tensor
-
-  //tensor_end
-
-  //azure
-  // const {
-  //   TextAnalyticsClient,
-  //   AzureKeyCredential,
-  // } = require("@azure/ai-text-analytics");
-  // const key = "84342dc624354a658939f5db9b1a40fc";
-  // const endpoint = "https://westus2.api.cognitive.microsoft.com/";
-  // const textAnalyticsClient = new TextAnalyticsClient(
-  //   endpoint,
-  //   new AzureKeyCredential(key)
-  // );
-  // var textUser = [];
-  //azure_End
 
   const [para, setPara] = useState("");
   const [userInput, setInput] = useState("");
   const [summarise, setsummarise] = useState("");
   const [flag, setflag] = useState(true);
   const [wordCount, setWordCount] = useState(0);
-
+  const [senti, setsenti] = useState("");
   const hist = useNavigate();
 
   const ChangeRoute = () => {
@@ -67,49 +50,34 @@ const WrittingSkills = () => {
   };
 
   const textQuality = async () => {
+
+    
     let SummarizerManager = require("node-summarizer").SummarizerManager;
-    let Summarizer = new SummarizerManager(userInput, 10);
+    let Summarizer = new SummarizerManager(userInput, 3);
     let sentiment = Summarizer.getSummaryByFrequency().summary;
-  
     setsummarise(sentiment);
+
+    var options = {
+      method: 'POST',
+      url: 'https://text-analysis12.p.rapidapi.com/sentiment-analysis/api/v1.1',
+      headers: {
+        'content-type': 'application/json',
+        'x-rapidapi-host': 'text-analysis12.p.rapidapi.com',
+        'x-rapidapi-key': '2d81ce8341msh08d2f3c250eaf42p195d14jsn60a5050dc3e1'
+      },
+      data: {
+        language: 'english',
+        text: userInput
+      }
+    };
+
+    axios.request(options).then(function (response) {
+      console.log(response.data);
+      setsenti(response.data.sentiment);
+    }).catch(function (error) {
+      console.error(error);
+    });
   };
-
-  // const textQuality = async () => {
-  //   if (userInput) {
-  //     const documents = [userInput];
-  //     const actions = {
-  //       extractSummaryActions: [
-  //         { modelVersion: "latest", orderBy: "Rank", maxSentenceCount: 5 },
-  //       ],
-  //     };
-  //     const poller = await textAnalyticsClient.beginAnalyzeActions(
-  //       documents,
-  //       actions,
-  //       "en"
-  //     );
-  //     const resultPages = await poller.pollUntilDone();
-  //     for await (const page of resultPages) {
-  //       const extractSummaryAction = page.extractSummaryResults[0];
-  //       if (!extractSummaryAction.error) {
-  //         for (const doc of extractSummaryAction.results) {
-  //           if (!doc.error) {
-  //             console.log("\tSummary:");
-  //             for (const sentence of doc.sentences) {
-  //               textUser.push(sentence.text);
-  //             }
-  //           } else {
-  //             console.error("\tError:", doc.error);
-  //           }
-  //         }
-  //       }
-  //     }
-
-  //     textUser = textUser.toString();
-  //     setsummarise(textUser);
-  //   } else {
-  //     alert("please Type something");
-  //   }
-  // };
 
   useEffect(() => {
     ChoosePara();
@@ -165,7 +133,8 @@ const WrittingSkills = () => {
                   >
                     Restart
                   </Button>
-                  <p>Word Count:  {wordCount}</p>
+                  <p>Word Count: {wordCount}</p>
+                  <p>sentiments: {senti}</p>
                 </div>
               </div>
             </div>

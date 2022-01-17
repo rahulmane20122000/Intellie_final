@@ -3,17 +3,20 @@ import "../Style/interview.css";
 import { BiArrowBack } from "react-icons/bi";
 import { AiFillHome } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import MCQDATA from "../Data/ListiningSkillsData";
+import REQDATA from "../Data/ListiningSkillsData";
 import "../Style/Listining.css";
 import { Button } from "@mui/material";
+
+const randomPara=Math.floor(Math.random() * 12);
 
 const ListiningSkills = () => {
   const [score, setScore] = useState(0);
   const [useAns, setUserAns] = useState("");
   const [paragraph, setparagraph] = useState("");
   const [getScore,setgetScore]=useState(true);
+  
 
-  const randomPara = Math.floor(Math.random() * 3);
+
 
   const hist = useNavigate();
   const ChangeRoute = () => {
@@ -59,7 +62,9 @@ const ListiningSkills = () => {
   };
 
   useEffect(() => {
-    setparagraph(MCQDATA[0].para);
+ 
+   
+    setparagraph(REQDATA[randomPara].para);
   });
 
   return (
@@ -80,12 +85,12 @@ const ListiningSkills = () => {
             <h1>{getScore?"Questions":"You Score"}</h1>
           </div>
 
-          {getScore?MCQDATA[randomPara].Question.map((val) => {
+          {getScore?REQDATA[randomPara].Questions.map((val) => {
             return (
               <>
                 <div className="input_btn">
                   <div className="input_btn_wrap">
-                    <p>{val.queText}</p>
+                    <p>{val.quesText}</p>
 
                     <input
                       placeholder="Answer in one word..."

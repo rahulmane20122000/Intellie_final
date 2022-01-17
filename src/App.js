@@ -9,6 +9,7 @@ import ListiningSkills from "./Pages/ListiningSkills";
 import Outfit from "./Pages/Outfit";
 import Live_Interview from "./Pages/Live_Interview";
 import Tech_firstpg from "./Pages/Tech_firstpg";
+import Extras from "./Pages/Extras";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/outfit" element={<Outfit />} />
         <Route exact path="/liveInterview" element={<Live_Interview/>} />
         <Route exact path="/technicalInterview" element={<Tech_firstpg/>} />
+        <Route exact path="/extras" element={<Extras/>} />
       </Routes>
     </>
   );

@@ -32,9 +32,13 @@
 
 .Wrapper_btn{
     display: flex;
+    justify-content: space-between;
 }
 
-.Wrapper_btn button{
+
+
+.Wrapper_btn button,
+.ExtraBtn button{
     width: 7rem;
     height: 50px;
     border:1px solid #ffff;
@@ -43,7 +47,8 @@
     margin-top: 1.5rem;
 }
 
-.Wrapper_btn button:hover{
+.Wrapper_btn button:hover,
+.ExtraBtn button:hover{
     background-color: #ffff;
     color: #111;
     font-weight: 600;

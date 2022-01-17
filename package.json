@@ -43,6 +43,7 @@
     "react-speech-recognition": "^3.9.0",
     "react-typing-test": "^0.7.0",
     "react-webcam": "^6.0.0",
+    "simple-sentiment-lib": "^1.1.8",
     "speech-synthesis": "^0.3.2",
     "text-quality-indicator": "^2.4.3",
     "text-summary": "^2.0.4",

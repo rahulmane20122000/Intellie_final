@@ -14,6 +14,7 @@ const Outfit = () => {
   const videoref = useRef(null);
   const [mobile,setmobile]=useState('');
   const [bottle,setbottle]=useState('');
+  const [start,setstart]=useState(true);
   const URL = "https://teachablemachine.withgoogle.com/models/efcWHlIUP/";
   let model, webcam, labelContainer, maxPredictions;
 
@@ -78,7 +79,7 @@ const Outfit = () => {
             <AiFillHome onClick={() => hist("/")} />
           </div>
         </nav>
-        <div className="container">
+        {start?<div className="container">
         <Webcam
           audio={false}
           height={720}
@@ -89,11 +90,12 @@ const Outfit = () => {
           mirrored={true}
         />
         <div className="Wrapper_btn">
+        <Button onClick={()=>setstart(!start)}>Stop Camera</Button>
       <Button onClick={init}> start</Button>
        <p style={{"color":"white"}}>{mobile}</p>
        <p style={{"color":"white"}}>{bottle}</p>
        </div>
-      </div>
+      </div>:<div className="ExtraBtn"> <Button onClick={()=>setstart(!start)}>Start</Button></div>}
         </div>
     </div>
   )

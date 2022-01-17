@@ -19,9 +19,9 @@
 }
 
 .input_btn_wrap p{
-    font-weight: 500;
-    letter-spacing: 3px;
-    font-size: 1rem;
+    font-weight: 700;
+    width: 25rem;
+    font-size: 0.75rem;
     margin: 2rem 0 1rem 0;
 }
 
