@@ -1,0 +1,165 @@
+body{
+    background-image:radial-gradient(#1111 -70%,#100c08 100%), url("../Assets/Home.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width:100vw;
+    z-index: -1;
+    box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.4);
+}
+
+.main_section {
+    background-image: radial-gradient(#1111 -70%, #100c08 100%),
+      url("../Assets/Home.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: -100;
+    box-shadow: inset 0 0 0 5000px rgba(0, 0, 0, 0.5);
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .backbtn {
+    position: absolute;
+    color: #ffff;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1fr 1rem;
+    width: 100vw;
+    transform: translateY(-400%);
+  }
+  
+  .svg1,
+  .svg2 {
+    font-size: 2.5rem;
+    margin: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .svg1 {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .svg2 {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .svg2:hover {
+    color: blue;
+  }
+
+  .webcam_comp_false{
+    display: none;
+  }
+
+  .camera{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.4);
+    width: fit-content;
+    height: fit-content;
+    padding: 50px;
+    border-radius: 15px;
+  }
+
+  .webcam_comp{
+    margin-left: 5.5rem;
+    border-radius: 15px;
+    
+  }
+
+  .webcam_comp ,
+  .camera img ,
+  .predict_btns{
+    margin-right: 5rem;
+  }
+  
+
+  .camera img{
+    margin-left: 5.5rem;
+    border-radius: 15px;
+  }
+
+  .predict_btns button{
+    color: #ffff;
+    border: 1px solid #ffff;
+    width: 7rem;
+    height: 2.5rem;
+  margin-left: 5rem;
+  transition: 0.4s ease-in;
+  }
+
+  .predict_btns{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 10rem;
+  }
+
+  .predict_btns button:hover{
+    background-color: #ffff;
+    color: #111;
+  }
+  
+  @media (max-width:  1400px) {
+    *{
+      overflow-y: scroll;
+    }
+  .svg1,
+  .svg2 {
+    font-size: 2.5rem;
+    transform: translateY(-10%);
+  }
+}
+
+
+@media (max-width: 768px) {
+ *{
+   overflow-x: hidden;
+ }
+    .svg1,
+    .svg2 {
+      font-size: 1.5rem;
+    }
+
+    .webcam_comp{
+      width: 100vw;
+      margin-left: 5rem;
+      
+    }
+
+    .predict_btns{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+      margin-right: 5rem;
+    }
+    .predict_btns button{
+      margin-top: 2.5rem;
+      width: 100vw;
+      height: 5rem;
+    }
+
+    .camera{
+      margin: 5rem;
+      width: fit-content;
+      height: fit-content;
+      padding: none;
+    }
+
+    .camera img{
+      width: 100vw;
+      margin-left: 0;
+    }
+}

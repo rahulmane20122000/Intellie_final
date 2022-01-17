@@ -1,0 +1,9 @@
+.main_home{
+  background-image:radial-gradient(#1111 -70%,#100c08 100%), url("../Assets/Home.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width:100vw;
+  z-index: -1;
+  box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.4);
+}

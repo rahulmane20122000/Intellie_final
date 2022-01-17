@@ -1,0 +1,56 @@
+.upload_files input{
+    color: #1111;
+    border: 1px solid #ffff;
+    letter-spacing: 3px;
+    background-color: transparent;
+}
+
+.upload_wrap {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.btn_pred button{
+    color: #ffff;
+    border: 1px solid #ffff;
+    margin-left: 1rem;
+}
+
+.dress{
+    display: flex;
+    flex-direction: column;
+    color: #ffff;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.wrap_all_pred{
+    display: flex;
+    flex-direction: column;
+}
+
+.Wrapper_btn{
+    display: flex;
+}
+
+.Wrapper_btn button{
+    width: 7rem;
+    height: 50px;
+    border:1px solid #ffff;
+    color: #ffff;
+    letter-spacing: 3px;
+    margin-top: 1.5rem;
+}
+
+.Wrapper_btn button:hover{
+    background-color: #ffff;
+    color: #111;
+    font-weight: 600;
+}
+
+.Wrapper_btn p{
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 7rem;
+}

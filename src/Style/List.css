@@ -1,0 +1,57 @@
+.practice_list{
+    width: 50rem;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr 2fr 1fr 1.5rem;
+    justify-content: start;
+    align-items: center;
+    margin-top: 3rem;
+    box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.4);
+}
+
+.practice_list h1{
+   grid-column: 2/3;
+    align-items: center;
+    color: #ffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.practice_list button{
+   grid-column: 4/5;
+   color: #ffff;
+   cursor: pointer;
+   border-radius: 15px;
+   width: 10rem;
+}
+.practice_list button:hover{
+    background-color: #ffff;
+    color: #111;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+@media(max-width:900px){
+    .practice_list{
+        width: 35rem;
+        
+    }
+    .practice_list h1{
+        font-size: 0.7rem;
+    }
+
+    .practice_list button{
+        width: 5rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media(max-width:600px){
+    .practice_list{
+        width: 25rem;
+        
+    }
+}

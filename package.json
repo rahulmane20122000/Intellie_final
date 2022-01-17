@@ -1,0 +1,77 @@
+{
+  "name": "interview_system",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@azure/ai-text-analytics": "^5.2.0-beta.1",
+    "@azure/cognitiveservices-customvision-prediction": "^5.1.2",
+    "@azure/ms-rest-js": "^2.6.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@grammarly/editor-sdk-react": "^1.2.1",
+    "@mui/material": "^5.0.6",
+    "@speechly/speech-recognition-polyfill": "^1.1.0",
+    "@teachablemachine/image": "^0.8.5",
+    "@tensorflow-models/qna": "^1.0.0",
+    "@tensorflow-models/toxicity": "^1.2.2",
+    "@tensorflow/tfjs": "^3.12.0",
+    "@tensorflow/tfjs-core": "^3.11.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@trashhalo/node-summarizer": "^1.0.9",
+    "axios": "^0.24.0",
+    "b64-to-image": "^1.0.2",
+    "base64-to-image": "^1.0.2",
+    "bootstrap": "^5.1.3",
+    "firebase-tools": "^10.0.1",
+    "framer-motion": "^5.2.1",
+    "natural": "^5.1.11",
+    "nlpcloud": "^1.0.13",
+    "node-summarizer": "^1.0.7",
+    "nodejs-text-summarizer": "^2.0.3",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.2",
+    "react-countdown": "^2.3.2",
+    "react-countdown-circle-timer": "^2.5.4",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-loader-spinner": "^4.0.0",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "react-speech-kit": "^3.0.1",
+    "react-speech-recognition": "^3.9.0",
+    "react-typing-test": "^0.7.0",
+    "react-webcam": "^6.0.0",
+    "speech-synthesis": "^0.3.2",
+    "text-quality-indicator": "^2.4.3",
+    "text-summary": "^2.0.4",
+    "text-to-speech-stream": "^1.0.1",
+    "typewriter-effect": "^2.18.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

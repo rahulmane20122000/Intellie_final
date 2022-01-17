@@ -1,0 +1,57 @@
+.mirror_wrap{
+    display: flex;
+    width:fit-content;
+    height: fit-content;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.para_class{
+    width: 1280px;
+    height: fit-content;
+    padding: 20px;
+    color: #ffff;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.para_class button{
+    width: 7rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: 1px solid #ffff;
+    color: #ffff;
+}
+
+.para_class button:hover{
+    background-color: #ffff;
+    color: #111;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+@media(max-width:768px){
+    
+    .para_class{
+        width: 25rem;
+
+    }
+
+    .mirror_webcam{
+        width: 55%;
+    }
+
+    .mirror_class{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

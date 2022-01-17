@@ -1,0 +1,104 @@
+.main_button{
+    position:absolute;
+    width:100%;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-top: 7rem;
+
+}
+.main_button_wrap{
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
+    grid-column: 2/3;
+    justify-content:center;
+    align-items:center;
+}
+
+.Title_Ai{
+    grid-column:2/3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   grid-row: 2/3;
+   
+}
+
+.Title_Ai h1{
+    text-align: center;
+    color: #ffff;
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+
+
+.get_started_button{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20rem;
+}
+
+.get_started_button Button{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    color:#111;
+    background-color: #ffff;
+    border-radius: 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.get_started_button button:hover{
+    color:#fff;
+    border:1.5px solid #fff;
+    background-color: transparent;
+}
+
+@media(max-width:1400px){
+    .Title_Ai h1{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width:968px){
+    .Title_Ai h1{
+        font-size: 2rem;
+
+    }
+
+    .main_button{
+        display: grid;
+        grid-template-columns: 1rem 2fr 1rem;
+    }
+}
+
+@media(max-width:500px){
+  
+  .main_button_wrap{
+      display: grid;
+      grid-template-rows: 5rem 1fr 1fr 5rem;
+    
+  }
+  .Title_Ai h1{
+    grid-row: 1/2;
+    font-size: 1.5rem;
+}
+.get_started_button{
+    grid-row: 2/3;
+}
+
+.get_started_button Button{
+    width: 80%;
+    height: 55%;
+    font-size: 55%;
+}
+
+}
+

@@ -1,0 +1,86 @@
+.Listining_skills_questions{
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    height: fit-content;
+    width: fit-content;
+    box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.4);
+}
+
+.title h1{
+    text-align: center;
+    border-bottom: 1px solid #ffff;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.input_btn_wrap p{
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.input_btn_wrap input{
+    width: 25rem;
+    height: 2.5rem;
+    background-color: transparent;
+    color: #ffff;
+    font-weight: 600;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid #ffff;
+    text-transform: capitalize;
+}
+
+.input_btn_wrap input::placeholder{
+    color: rgb(116, 111, 111);
+    text-indent: 5px;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.input_btn_wrap button{
+    margin-left: 1rem;
+    border:1px solid #ffff;
+    border-radius: 25px;
+    width: 7rem;
+    color: #ffff;
+}
+
+.note_para{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    font-size: 0.8rem;
+    color: #ffff;
+    margin-top: 1rem;
+}
+
+.input_btn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+
+
+.btns_wrap_listing button{
+     color: #ffff;
+     border-radius: 15px;
+     width: 10rem;
+     letter-spacing: 3px;
+     border:1px solid #ffff;
+     margin-top: 2.5rem;
+     margin-left: 1rem;
+}
+
+.btns_wrap_listing button:hover{
+    background-color: #ffff;
+    color: #111;
+}
